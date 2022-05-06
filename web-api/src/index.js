@@ -6,10 +6,12 @@ const port = process.env.PORT || 9000;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+//Envia el mensaje espera un resquest y luego envia la respuesta
+app.get("/", (req, res) => {
+  res.send("Hello World!");
 });
 
+//Inicia la escucha en el puerto
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
